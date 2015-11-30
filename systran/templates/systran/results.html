@@ -1,0 +1,16 @@
+{% extends 'site/base.html' %}
+
+{% block title %}
+<title>Démo</title>
+{% endblock title %}
+
+{% block content %}
+<h1>{{ sentence }} : {{ prediction }}</h1>
+<div class='container' center:"left">
+  <ul>
+    {% for key in keywords %}
+    <li> {{ key }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock content %}

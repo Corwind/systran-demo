@@ -1,0 +1,28 @@
+{% extends 'site/base.html' %}
+
+{% block title %}
+<title>Systran</title>
+{% endblock title %}
+
+{% block content %}
+<h1>Submit a sentence</h1>
+
+  <form class="form-horizontal" action="/systran/" method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <div class="form-group fieldWrapper">
+      {{ form.sentence.errors }}
+      <label for="{{ form.sentence.id_for_label }}" class="col-sm-2
+        control-label">Sentence:</label>
+      <div class="col-sm-10">
+      {{ form.sentence }}
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" class="btn btn-primary btn-lg active" value="Envoyer" />
+      </div>
+    </div>
+  </form>
+
+{% endblock content %}

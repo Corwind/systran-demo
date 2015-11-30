@@ -1,0 +1,8 @@
+model
+svm_classify
+db.sqlite3
+test
+tmp
+dic
+dic_98
+static
